@@ -20,6 +20,15 @@ Este repositorio contiene guías completas y scripts automatizados para instalar
 ### 🐧 Linux (Ubuntu/Debian)
 *Próximamente*
 
+### 🐳 Docker (Multiplataforma)
+- **`DOCKER_DEPLOYMENT.md`** - Guía completa de despliegue Docker
+- **`docker-compose.yml`** - Configuración para producción
+- **`docker-compose.dev.yml`** - Configuración para desarrollo
+- **`docker-manage.sh`** - Script de gestión para producción
+- **`docker-dev.sh`** - Script de gestión para desarrollo
+- **`Dockerfile`** - Imagen Docker para producción
+- **`Dockerfile.dev`** - Imagen Docker para desarrollo
+
 ## 🚀 Instalación Rápida
 
 ### macOS
@@ -42,6 +51,21 @@ O usar el script batch:
 install_odoo_windows.bat
 ```
 
+### Docker (Recomendado para Producción)
+```bash
+# Configurar entorno
+cp .env.example .env
+# Editar .env con tu configuración
+
+# Producción
+./docker-manage.sh build
+./docker-manage.sh start
+
+# Desarrollo
+./docker-dev.sh build
+./docker-dev.sh start
+```
+
 ## 🎯 Características de los Scripts
 
 ### ✅ Scripts Automáticos
@@ -55,14 +79,16 @@ install_odoo_windows.bat
 
 ### 🛠️ Componentes Instalados
 
-| Componente | macOS | Windows |
-|------------|-------|---------|
-| Python 3.11+ | ✅ Homebrew | ✅ winget |
-| PostgreSQL 14+ | ✅ Homebrew | ✅ winget |
-| Git | ✅ Homebrew | ✅ winget |
-| Node.js | ✅ Homebrew | ✅ winget |
-| SASS Compiler | ✅ sassc (libsass) | ✅ npm sass |
-| Build Tools | ✅ Xcode Command Line | ✅ VS Build Tools |
+| Componente | macOS | Windows | Docker |
+|------------|-------|---------|--------|
+| Python 3.11+ | ✅ Homebrew | ✅ winget | ✅ Imagen base |
+| PostgreSQL 14+ | ✅ Homebrew | ✅ winget | ✅ Container |
+| Git | ✅ Homebrew | ✅ winget | ✅ Incluido |
+| Node.js | ✅ Homebrew | ✅ winget | ✅ Incluido |
+| SASS Compiler | ✅ sassc (libsass) | ✅ npm sass | ✅ npm sass |
+| Build Tools | ✅ Xcode Command Line | ✅ VS Build Tools | ✅ Incluido |
+| Nginx | ❌ | ❌ | ✅ Container |
+| SSL/HTTPS | ❌ | ❌ | ✅ Auto-configurado |
 
 ## 📋 Requisitos del Sistema
 
@@ -77,6 +103,12 @@ install_odoo_windows.bat
 - 4GB RAM (8GB recomendado)
 - 10GB espacio libre
 - Permisos de administrador
+
+### Docker
+- Docker 20.10+ y Docker Compose 2.0+
+- 4GB RAM (8GB recomendado para producción)
+- 20GB espacio libre
+- Sistema operativo compatible con Docker
 
 ## 🔧 Estructura de Instalación
 
