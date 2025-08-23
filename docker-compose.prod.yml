@@ -1,0 +1,89 @@
+version: '3.8'
+
+# Docker Compose para producción de Odoo 18.0
+# Configuración con Nginx reverse proxy y SSL
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:14-alpine
+    container_name: odoo_prod_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: ${DB_USER:-odoo}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-odoo_secure_password}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data/pgdata
+    restart: unless-stopped
+    networks:
+      - odoo_internal
+    # No exponemos el puerto externamente por seguridad
+
+  # Odoo Application
+  odoo:
+    image: odoo:18.0
+    container_name: odoo_prod_app
+    depends_on:
+      - db
+    environment:
+      - HOST=db
+      - USER=${DB_USER:-odoo}
+      - PASSWORD=${DB_PASSWORD:-odoo_secure_password}
+      - POSTGRES_DB=${DB_NAME:-postgres}
+    volumes:
+      - odoo_prod_data:/var/lib/odoo
+      - odoo_prod_logs:/var/log/odoo
+      - ./config/odoo.prod.conf:/etc/odoo/odoo.conf:ro
+    restart: unless-stopped
+    networks:
+      - odoo_internal
+    # No exponemos puertos directamente, solo a través de Nginx
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: odoo_nginx
+    depends_on:
+      - odoo
+    ports:
+      - "80:80"      # HTTP (redirigido a HTTPS)
+      - "443:443"    # HTTPS
+    volumes:
+      - ./nginx/nginx.prod.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - nginx_logs:/var/log/nginx
+    restart: unless-stopped
+    networks:
+      - odoo_internal
+      - web
+
+  # Certbot para SSL automático (Let's Encrypt)
+  certbot:
+    image: certbot/certbot
+    container_name: odoo_certbot
+    volumes:
+      - ./nginx/ssl:/etc/letsencrypt
+      - ./nginx/certbot-webroot:/var/www/certbot
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email ${SSL_EMAIL} -d ${DOMAIN} --agree-tos --no-eff-email
+    depends_on:
+      - nginx
+    networks:
+      - web
+
+volumes:
+  postgres_prod_data:
+    driver: local
+  odoo_prod_data:
+    driver: local
+  odoo_prod_logs:
+    driver: local
+  nginx_logs:
+    driver: local
+
+networks:
+  odoo_internal:
+    driver: bridge
+    internal: true  # Red interna, no acceso directo desde internet
+  web:
+    driver: bridge  # Red para acceso web
