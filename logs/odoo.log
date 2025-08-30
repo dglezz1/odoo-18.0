@@ -18864,3 +18864,91 @@ KeyError: 'ir.http'
 2025-08-30 18:01:20,424 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:01:20] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.001
 2025-08-30 18:01:50,492 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:01:50] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
 2025-08-30 18:02:20,546 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:02:20] "GET /web/health HTTP/1.1" 200 - 1 0.000 0.001
+2025-08-30 18:02:50,624 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:02:50] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.004
+2025-08-30 18:03:20,686 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:03:20] "GET /web/health HTTP/1.1" 200 - 1 0.000 0.001
+2025-08-30 18:03:50,751 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:03:50] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:04:05,426 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:05] "POST /web/dataset/call_kw/res.config.settings/web_save HTTP/1.1" 200 - 13 0.009 0.021
+2025-08-30 18:04:05,463 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:05] "POST /web/action/load HTTP/1.1" 200 - 9 0.005 0.006
+2025-08-30 18:04:05,498 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:05] "POST /web/dataset/call_kw/base.language.install/get_views HTTP/1.1" 200 - 11 0.007 0.012
+2025-08-30 18:04:05,508 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:05] "POST /web/dataset/call_kw/base.language.install/onchange HTTP/1.1" 200 - 2 0.001 0.002
+2025-08-30 18:04:06,495 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:06] "POST /web/dataset/call_kw/res.lang/name_search HTTP/1.1" 200 - 2 0.004 0.005
+2025-08-30 18:04:08,343 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:08] "POST /web/dataset/call_kw/res.lang/name_search HTTP/1.1" 200 - 2 0.003 0.006
+2025-08-30 18:04:10,446 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:10] "POST /web/dataset/call_kw/res.lang/name_search HTTP/1.1" 200 - 2 0.003 0.006
+2025-08-30 18:04:13,216 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:13] "POST /web/dataset/call_kw/res.lang/name_search HTTP/1.1" 200 - 2 0.002 0.005
+2025-08-30 18:04:13,250 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:13] "POST /web/dataset/call_kw/res.lang/get_views HTTP/1.1" 200 - 19 0.008 0.014
+2025-08-30 18:04:13,263 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:13] "POST /web/dataset/call_kw/res.lang/web_search_read HTTP/1.1" 200 - 2 0.001 0.002
+2025-08-30 18:04:19,809 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:19] "POST /web/dataset/call_kw/res.lang/web_read HTTP/1.1" 200 - 2 0.002 0.005
+2025-08-30 18:04:20,820 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:04:20] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:04:22,150 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:22] "POST /web/dataset/call_kw/base.language.install/web_save HTTP/1.1" 200 - 7 0.008 0.008
+2025-08-30 18:04:22,174 1 INFO ? werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:22] "GET /web/static/img/spin.svg HTTP/1.1" 200 - 0 0.000 0.002
+2025-08-30 18:04:22,182 1 INFO odoo_local odoo.addons.base.models.ir_module: module base: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,182 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/base/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,420 1 INFO odoo_local odoo.addons.base.models.ir_module: module web: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,420 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/web/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,488 1 INFO odoo_local odoo.addons.base.models.ir_module: module auth_totp: loading translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,488 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/auth_totp/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,491 1 INFO odoo_local odoo.addons.base.models.ir_module: module base_import: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,491 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/base_import/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,497 1 INFO odoo_local odoo.addons.base.models.ir_module: module base_import_module: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,497 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/base_import_module/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,500 1 INFO odoo_local odoo.addons.base.models.ir_module: module base_setup: loading translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,500 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/base_setup/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,503 1 INFO odoo_local odoo.addons.base.models.ir_module: module bus: loading translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,503 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/bus/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,505 1 INFO odoo_local odoo.addons.base.models.ir_module: module html_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,505 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/html_editor/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,512 1 INFO odoo_local odoo.addons.base.models.ir_module: module iap: loading translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,512 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/iap/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,514 1 INFO odoo_local odoo.addons.base.models.ir_module: module web_editor: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_editor/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,514 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/web_editor/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,525 1 INFO odoo_local odoo.addons.base.models.ir_module: module web_tour: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,525 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/web_tour/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,527 1 INFO odoo_local odoo.addons.base.models.ir_module: module web_unsplash: loading translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,527 1 INFO odoo_local odoo.tools.translate: loading base translation file /usr/lib/python3/dist-packages/odoo/addons/web_unsplash/i18n/es.po for language es_ES 
+2025-08-30 18:04:22,719 1 INFO odoo_local odoo.modules.registry: Caches invalidated, signaling through the database: ['default'] 
+2025-08-30 18:04:22,720 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:22] "POST /web/dataset/call_button/base.language.install/lang_install HTTP/1.1" 200 - 70 0.158 0.403
+2025-08-30 18:04:22,733 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:22] "POST /web/dataset/call_kw/base.language.install/get_views HTTP/1.1" 200 - 17 0.003 0.003
+2025-08-30 18:04:22,743 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:22] "POST /web/dataset/call_kw/base.language.install/web_read HTTP/1.1" 200 - 3 0.001 0.001
+2025-08-30 18:04:25,715 1 INFO odoo_local odoo.modules.registry: Caches invalidated, signaling through the database: ['default'] 
+2025-08-30 18:04:25,717 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:25] "POST /web/dataset/call_button/base.language.install/switch_lang HTTP/1.1" 200 - 10 0.006 0.011
+2025-08-30 18:04:26,076 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /web/session/get_session_info HTTP/1.1" 200 - 44 0.011 0.343
+2025-08-30 18:04:26,115 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /odoo/settings HTTP/1.1" 200 - 24 0.005 0.014
+2025-08-30 18:04:26,494 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/webclient/translations/29a6a8ffb537764fccf66dd22930ff19d915219f?lang=es_ES HTTP/1.1" 200 - 1 0.002 0.043
+2025-08-30 18:04:26,495 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/assets/aaa8815/web.assets_web.min.css HTTP/1.1" 200 - 3 0.017 0.035
+2025-08-30 18:04:26,509 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/webclient/load_menus/6dc20acac58778abe6943734bc08e06f77b2f025167ab07a8785fcd29168915f HTTP/1.1" 200 - 7 0.027 0.037
+2025-08-30 18:04:26,509 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/assets/4b4350f/web.assets_web.min.js HTTP/1.1" 200 - 3 0.007 0.054
+2025-08-30 18:04:26,509 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 7 0.018 0.046
+2025-08-30 18:04:26,519 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/assets/4881e53/web.assets_web_print.min.css HTTP/1.1" 200 - 3 0.002 0.003
+2025-08-30 18:04:26,649 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/webclient/translations/29a6a8ffb537764fccf66dd22930ff19d915219f?lang=es_ES HTTP/1.1" 200 - 1 0.000 0.010
+2025-08-30 18:04:26,686 1 INFO ? werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.002
+2025-08-30 18:04:26,688 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /bus/websocket_worker_bundle?v=18.0-5 HTTP/1.1" 304 - 3 0.007 0.004
+2025-08-30 18:04:26,697 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 9 0.009 0.011
+2025-08-30 18:04:26,698 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/image/res.partner/3/avatar_128?unique=1756598665000 HTTP/1.1" 200 - 8 0.007 0.013
+2025-08-30 18:04:26,699 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /web/action/load HTTP/1.1" 200 - 10 0.008 0.009
+2025-08-30 18:04:26,700 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /websocket?version=18.0-5 HTTP/1.1" 101 - 1 0.001 0.004
+2025-08-30 18:04:26,715 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /web/dataset/call_kw/res.config.settings/get_views HTTP/1.1" 200 - 12 0.003 0.006
+2025-08-30 18:04:26,737 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /web/dataset/call_kw/res.config.settings/onchange HTTP/1.1" 200 - 28 0.004 0.009
+2025-08-30 18:04:26,761 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.001 0.001
+2025-08-30 18:04:26,765 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "POST /base_setup/data HTTP/1.1" 200 - 6 0.001 0.001
+2025-08-30 18:04:26,773 1 INFO ? werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:26] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.001
+2025-08-30 18:04:27,131 1 INFO odoo_local werkzeug: 192.168.65.1 - - [30/Aug/2025 18:04:27] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.004
+2025-08-30 18:04:50,893 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:04:50] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.004
+2025-08-30 18:05:20,963 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:05:20] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.005
+2025-08-30 18:05:51,042 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:05:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.005
+2025-08-30 18:06:21,113 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:06:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:06:51,194 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:06:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.003
+2025-08-30 18:07:21,264 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:07:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.004
+2025-08-30 18:07:51,335 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:07:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:08:21,406 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:08:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:08:51,473 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:08:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:09:21,535 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:09:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:09:51,610 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:09:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:10:21,682 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:10:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.005
+2025-08-30 18:10:51,746 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:10:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:11:21,812 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:11:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:11:51,875 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:11:51] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:12:21,944 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:12:21] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:12:52,012 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:12:52] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:13:22,067 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:13:22] "GET /web/health HTTP/1.1" 200 - 1 0.000 0.001
+2025-08-30 18:13:52,151 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:13:52] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.002
+2025-08-30 18:23:14,617 1 INFO odoo_local werkzeug: 127.0.0.1 - - [30/Aug/2025 18:23:14] "GET /web/health HTTP/1.1" 200 - 1 0.001 0.005

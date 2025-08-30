@@ -90,9 +90,6 @@ USER $ODOO_USER
 # Exponer puertos
 EXPOSE 8069 8071 8072
 
-# Volúmenes para datos persistentes
-VOLUME ["$ODOO_HOME/data", "$ODOO_HOME/logs", "$ODOO_HOME/addons"]
-
 # Comando de entrada
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["odoo"]

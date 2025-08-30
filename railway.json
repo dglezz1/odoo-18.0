@@ -1,0 +1,27 @@
+{
+  "deploy": {
+    "healthcheckPath": "/web/health",
+    "healthcheckTimeout": 30,
+    "restartPolicyType": "on-failure",
+    "restartPolicyMaxRetries": 3
+  },
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "environments": {
+    "production": {
+      "variables": {
+        "ODOO_RC": "/etc/odoo/odoo.conf",
+        "WORKERS": "2",
+        "MAX_CRON_THREADS": "1",
+        "DB_MAXCONN": "64",
+        "LIMIT_MEMORY_HARD": "2684354560",
+        "LIMIT_MEMORY_SOFT": "2147483648",
+        "LIMIT_REQUEST": "8192",
+        "LIMIT_TIME_CPU": "60",
+        "LIMIT_TIME_REAL": "120"
+      }
+    }
+  }
+}

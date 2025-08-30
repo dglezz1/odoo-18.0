@@ -50,3 +50,7 @@ package.json
 /man/
 /share/
 /src/
+
+# Railway environment files
+.env.railway
+.env.railway.*
