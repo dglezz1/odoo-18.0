@@ -47,6 +47,13 @@ package-lock.json
 package.json
 .husky
 
+# environment variables (sensitive data)
+.env
+.env.*
+!.env.example
+.env.filltech
+.env.prod
+
 # various virtualenv
 /bin/
 /build/
