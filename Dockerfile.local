@@ -21,11 +21,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     fonts-noto-cjk \
     gnupg \
     libssl-dev \
-    libpq-dev \
-    netcat \
     node-less \
     npm \
-    python3-dev \
     python3-num2words \
     python3-pdfminer \
     python3-pip \
@@ -40,8 +37,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-xlrd \
     python3-xlwt \
     xz-utils \
-    wkhtmltopdf \
-    && rm -rf /var/lib/apt/lists/*
+    && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.buster_amd64.deb \
+    && echo 'ea8277df4297afc507c61122f3c349af142f31e5 wkhtmltox.deb' | sha1sum -c - \
+    && apt-get install -y --no-install-recommends ./wkhtmltox.deb \
+    && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 # Crear usuario odoo
 RUN useradd -r -d $ODOO_HOME -s /bin/bash $ODOO_USER
@@ -58,9 +57,11 @@ RUN mkdir -p \
     /mnt/extra-addons \
     && chown -R $ODOO_USER:$ODOO_USER /var/lib/odoo /var/log/odoo /etc/odoo /mnt/extra-addons
 
-# Copiar código fuente
-COPY . .
-RUN chown -R $ODOO_USER:$ODOO_USER $ODOO_HOME
+# Descargar e instalar Odoo
+WORKDIR $ODOO_HOME
+RUN curl -o odoo.tar.gz -sSL https://nightly.odoo.com/18.0/nightly/src/odoo_18.0.latest.tar.gz \
+    && tar -xzf odoo.tar.gz --strip-components=1 \
+    && rm odoo.tar.gz
 
 # Instalar dependencias de Python
 COPY requirements.txt .
