@@ -70,8 +70,18 @@ data/
 logs/
 *.log
 
-# Keep deployment scripts but ignore local builds
+# Keep deployment scripts but ignore local builds and secrets
 docker-compose.override.yml
 .env
 .env.local
 deploy-success.sh
+
+# Production scripts to include
+!deploy-prod.sh
+!build-prod.sh
+!backup.sh
+!check-production.sh
+!entrypoint.prod.sh
+
+# Ignore sensitive production files but keep templates
+!.env.prod.template
