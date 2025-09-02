@@ -7,6 +7,12 @@ _build/
 !.github
 !.mailmap
 !.weblate.json
+!.dockerignore
+!.env.prod.template
+
+# Production environment files (keep template, ignore actual secrets)
+.env.prod
+.env.prod.local
 # compiled python files
 *.py[co]
 __pycache__/
@@ -54,3 +60,18 @@ package.json
 # Railway environment files
 .env.railway
 .env.railway.*
+
+# Docker and Production files
+# Keep production configuration but ignore sensitive data
+nginx/ssl/
+backups/
+backup_*/
+data/
+logs/
+*.log
+
+# Keep deployment scripts but ignore local builds
+docker-compose.override.yml
+.env
+.env.local
+deploy-success.sh
