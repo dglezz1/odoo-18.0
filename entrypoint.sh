@@ -29,11 +29,13 @@ if [ "$1" = 'odoo' ]; then
         --db_port=$PORT \
         --db_user=$USER \
         --db_password=$PASSWORD \
-        --addons-path=/opt/odoo/addons,/mnt/extra-addons,/mnt/custom-addons \
+        --addons-path=/opt/odoo/addons \
         --data-dir=/var/lib/odoo \
         --logfile=/var/log/odoo/odoo.log \
         --log-level=info \
-        --workers=0
+        --init=base \
+        --workers=0 \
+        --without-demo=False
 fi
 
 # Ejecutar cualquier otro comando
